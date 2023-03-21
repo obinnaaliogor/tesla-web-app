@@ -17,7 +17,7 @@ stages{
 stage('1CodeClone'){
 steps{
 sh "echo 'Clonning code from GitHub'"
-git "https://github.com/obinnaaliogor/tesla-app.git"
+git "https://github.com/obinnaaliogor/tesla-web-app.git"
 }
 }
 
@@ -68,7 +68,7 @@ sh 'docker rmi -f $(docker images -q)'
 stage('Trigger ManifestUpdate') {
 steps{
                 echo "triggering updatemanifestjob"
-                build job: 'updatemanifestspringapp', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+                build job: 'tesla-app-k8smanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
         }
 }
 
