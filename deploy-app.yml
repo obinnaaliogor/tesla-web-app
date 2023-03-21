@@ -5,3 +5,4 @@
       copy: src=app.yml dest=/home/ubuntu/myapp.yml    
     - name: deploy the web application 
       shell: kubectl apply -f /home/ubuntu/myapp.yml  
+##
