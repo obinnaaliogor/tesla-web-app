@@ -21,13 +21,14 @@ git "https://github.com/obinnaaliogor/tesla-web-app.git"
 }
 }
 
-/*
+
 stage('2Test+Build'){
 steps{
 sh "echo 'Creating an Artifacts'"
 sh "mvn clean package"
 }
 }
+/*
 stage('3CodeQuality'){
 steps{
 sh "echo 'Performing code Quality Review and Analysis'"
